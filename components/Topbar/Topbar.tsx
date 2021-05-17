@@ -47,12 +47,13 @@ export const Topbar: FC<TopbarTypes> = ({
       </div>
       <Menu
         mode="horizontal"
-        style={{ marginRight: -20, backgroundColor: 'black', color: 'gray', border: 0 }}
+        style={{ marginRight: -20, backgroundColor: 'black', color: '#afafaf', border: 0, fontSize: '1rem', fontWeight: 600 }}
       >
         {TopMenuItems.map(({ menuTxt, href }) => {
           return (
             <Menu.Item style={{border: 0}}>
-              <a href={href} style={{color: 'gray'}}>
+              <a className="navLink" href={href} 
+              >
                 {menuTxt}
               </a>
             </Menu.Item>
@@ -79,7 +80,7 @@ export const Topbar: FC<TopbarTypes> = ({
           })}
         </SubMenu>
 
-        <Menu.Item style={{border: 0, backgroundColor: 'black', padding: '0 1em', borderRadius: 10}}>
+        <Menu.Item style={{border: 0, backgroundColor: '#252628', padding: '0 1em', borderRadius: 5}}>
           <IconFont type="icon-shoppingcart" />
           {menuIconTxt}
         </Menu.Item>

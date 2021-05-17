@@ -22,17 +22,17 @@ export const Navbar: FC<NavbarTypes> = ({ NavMenuItems }) => {
       <Menu
         mode="horizontal"
         selectedKeys={[current]}
-        style={{ marginLeft: -20, backgroundColor: 'black', color: 'white', border: 0 }}
+        style={{ marginLeft: -20, backgroundColor: 'black', color: 'white', border: 0, fontSize: '1rem', fontWeight: 600 }}
       >
         {NavMenuItems.map(({ menuTxt, href, key }) => {
           return (
             <Menu.Item key={key} className="border-0" onClick={() => setCurrent(key)}>
               <a
                 href={href}
-                style={{color: 'gray'}}
-                className={`
+                style={{color: '#afafaf'}}
+                className={`navLink ${
                   key === current ? 'selectedMenuItem' : ''
-                `}
+                }`}
               >
                 {menuTxt}
               </a>
