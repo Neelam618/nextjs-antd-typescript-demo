@@ -13,7 +13,7 @@ export type NavbarTypes = {
 };
 
 export const Navbar: FC<NavbarTypes> = ({ NavMenuItems }) => {
-  const [current, setCurrent] = useState('0');
+  const [current, setCurrent] = useState('key1');
   return (
     <div
       style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.5rem 4rem' }}

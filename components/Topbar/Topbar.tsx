@@ -43,7 +43,7 @@ export const Topbar: FC<TopbarTypes> = ({
       id="topbar"
     >
       <div>
-        <img src={logo} alt="" style={{width: 150}} />
+        <img src={logo} alt="" style={{width: 200}} />
       </div>
       <Menu
         mode="horizontal"
