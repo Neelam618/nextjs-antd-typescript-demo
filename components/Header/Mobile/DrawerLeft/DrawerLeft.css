@@ -1,0 +1,42 @@
+/* Drawer */
+.ant-drawer-close {
+    padding: 13px;
+}
+.ant-drawer-close svg {
+    fill: white;
+}
+.ant-drawer-body {
+    padding: 0;
+}
+
+/* Select Input */
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+    background-color: green;
+    color: white;
+    border: none;
+}
+.ant-select-arrow {
+    color: white;
+}
+/* Search Input */
+.ant-input {
+    border-radius: 10px;
+}
+.ant-btn.ant-btn-icon-only{
+    border-radius: 10px !important;
+    border: none;
+}
+.ant-btn-icon-only > * {
+    font-size: 18px;
+}
+.ant-input-group-addon {
+    border-radius: 20px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    color: white;
+}
+
+/* Select */
+.ant-collapse > .ant-collapse-item {
+    border: none;
+}

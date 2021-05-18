@@ -27,13 +27,13 @@ export type TopbarTypes = {
   menuIconTxt?: string;
   Options: OptionsType[];
   TopMenuItems: TopMenuItemsType[];
-  dropDownTxt?: string;
+  dropdownTxt?: string;
 };
 
 export const Topbar: FC<TopbarTypes> = ({
   logo,
   menuIconTxt,
-  dropDownTxt,
+  dropdownTxt,
   Options,
   TopMenuItems,
 }) => {
@@ -62,7 +62,7 @@ export const Topbar: FC<TopbarTypes> = ({
 
         <SubMenu
           icon={<AppstoreOutlined />}
-          title={dropDownTxt}
+          title={dropdownTxt}
           style={{border: 0}}
           popupClassName="topbarPopup"
         >
