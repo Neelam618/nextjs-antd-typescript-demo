@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Drawer, Button, Select, Input, Space, Collapse } from 'antd';
 import { CaretRightOutlined } from '@ant-design/icons';
-import './DrawerLeft.css';
+import './DrawerLeft.less';
 
 const { Option } = Select;
 const { Search } = Input;
@@ -40,8 +40,6 @@ export const DrawerLeft: FC<DrawerLeftTypes> = ({ imgSrcIconLeft, SelectOptions,
     setVisible(false);
   };
 
-  const [current, setCurrent] = useState('0');
-  const index = 0;
   const title = (
     <>
       <div style={{ margin: '1rem 3rem' }}>
@@ -52,8 +50,7 @@ export const DrawerLeft: FC<DrawerLeftTypes> = ({ imgSrcIconLeft, SelectOptions,
         />
       </div>
       <Select
-        defaultValue={[current]}
-        onClick={() => setCurrent(`${index}`)}
+        defaultValue={"Web Themes & Template"}
         dropdownStyle={{ padding: 0 }}
         listHeight={400}
         style={{ width: '100%' }}
@@ -62,7 +59,7 @@ export const DrawerLeft: FC<DrawerLeftTypes> = ({ imgSrcIconLeft, SelectOptions,
         {SelectOptions.map(({ optionTxt, href }) => {
           return (
             <Option
-              value={`${index}`}
+              value={optionTxt}
               style={{
                 backgroundColor: '#2c2e33',
                 color: 'white',
@@ -89,9 +86,9 @@ export const DrawerLeft: FC<DrawerLeftTypes> = ({ imgSrcIconLeft, SelectOptions,
       <Button
         type="primary"
         onClick={showDrawer}
-        className="ml-3 bg-gray-700 border-0 hover:bg-blue-400"
+        style={{ backgroundColor: '#292929', border: 0 }}
       >
-        <img src={imgSrcIconLeft} alt="" className="block h-4" />
+        <img src={imgSrcIconLeft} alt="" style={{display: 'block', height: '1rem'}} />
       </Button>
       <Drawer
         title={title}

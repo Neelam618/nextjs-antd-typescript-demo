@@ -39,6 +39,7 @@ export const Topbar: FC<TopbarTypes> = ({
 }) => {
   return (
     <div
+    className="topbarWrapper"
       style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.5rem 4rem'}}
       id="topbar"
     >

@@ -27,7 +27,7 @@ export const DrawerRight: FC<DrawerRightTypes> = ({ imgSrcIconRight, RightMenuIt
       <Button
         type="primary"
         onClick={showDrawer}
-        className="mr-3 bg-gray-700 border-0 hover:bg-blue-400"
+        style={{ backgroundColor: '#292929', border: 0 }}
       >
         <img src={imgSrcIconRight} alt="" className="block h-4" />
       </Button>

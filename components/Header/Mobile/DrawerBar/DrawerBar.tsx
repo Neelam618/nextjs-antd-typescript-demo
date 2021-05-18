@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { DrawerRight } from './DrawerRight';
-import { DrawerLeft } from './DrawerLeft/DrawerLeft';
+import { DrawerRight } from '../DrawerRight';
+import { DrawerLeft } from '../DrawerLeft/DrawerLeft';
+import './DrawerBar.less'
 
 export type DrawerBarTypes = {
   imgSrcIconRight: string;
@@ -42,9 +43,13 @@ export const DrawerBar: FC<DrawerBarTypes> = ({
   logo,
 }) => {
   return (
-    <div className="flex xl:hidden justify-between items-center bg-gray-800 py-2">
+    <div
+    className="drawerBarWrapper"
+    style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.5rem 1rem'}}  
+    >
+
       <DrawerLeft imgSrcIconLeft={imgSrcIconLeft} SelectOptions={SelectOptions} Panels={Panels} />
-      <img src={logo} alt="" className="h-5" />
+      <img src={logo} alt="" style={{height: '1.2rem'}} />
       <DrawerRight imgSrcIconRight={imgSrcIconRight} RightMenuItems={RightMenuItems} />
     </div>
   );

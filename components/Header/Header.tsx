@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Topbar } from './Desktop/Topbar/Topbar';
 import { Navbar } from './Desktop/Navbar/Navbar';
-// import { DrawerBar } from './Mobile/DrawerBar';
+import { DrawerBar } from './Mobile/DrawerBar/DrawerBar';
 import { SubNavbar } from './Desktop/SubNavbar/SubNavbar';
 
 export type HeaderType = {
@@ -11,11 +11,11 @@ export type HeaderType = {
   Options: OptionsType[];
   TopMenuItems: TopMenuItemsType[];
   NavMenuItems: NavMenuItemsType[];
-  // imgSrcIconLeft: string;
-  // RightMenuItems: RightMenuItemsType[];
-  // SelectOptions: SelectOptionsType[];
-  // Panels: PanelsType[];
-  // imgSrcIconRight: string;
+  imgSrcIconLeft: string;
+  RightMenuItems: RightMenuItemsType[];
+  SelectOptions: SelectOptionsType[];
+  Panels: PanelsType[];
+  imgSrcIconRight: string;
   DropdownItems: DropdownItemsType[];
 };
 
@@ -35,27 +35,28 @@ type TopMenuItemsType = {
   menuTxt: string;
   href: string;
 };
-// type RightMenuItemsType = {
-//   menuTxt: string;
-//   href: string;
-//   iconImgSrc: string;
-// };
 
-// type SelectOptionsType = {
-//   optionTxt: string;
-//   href: string;
-// };
+type RightMenuItemsType = {
+  menuTxt: string;
+  href: string;
+  iconImgSrc: string;
+};
 
-// type PanelsType = {
-//   panelHeader: string;
-//   PanelChildren: PanelChildrenType[];
-//   key: string;
-// };
+type SelectOptionsType = {
+  optionTxt: string;
+  href: string;
+};
 
-// type PanelChildrenType = {
-//   panelLink: string;
-//   href: string;
-// };
+type PanelsType = {
+  panelHeader: string;
+  PanelChildren: PanelChildrenType[];
+  key: string;
+};
+
+type PanelChildrenType = {
+  panelLink: string;
+  href: string;
+};
 
 type SubNavOptionsType = {
   optionTxt: string;
@@ -78,15 +79,15 @@ export const Header: FC<HeaderType> = ({
   Options,
   TopMenuItems,
   NavMenuItems,
-  // imgSrcIconLeft,
-  // RightMenuItems,
-  // SelectOptions,
-  // Panels,
-  // imgSrcIconRight,
+  imgSrcIconLeft,
+  RightMenuItems,
+  SelectOptions,
+  Panels,
+  imgSrcIconRight,
   DropdownItems,
 }) => {
   return (
-    <div>
+    <div className="headerWrapper">
       <Topbar
         logo={logo}
         menuIconTxt={menuIconTxt}
@@ -95,14 +96,14 @@ export const Header: FC<HeaderType> = ({
         TopMenuItems={TopMenuItems}
       />
       <Navbar NavMenuItems={NavMenuItems} />
-      {/* <DrawerBar
+      <DrawerBar
         imgSrcIconLeft={imgSrcIconLeft}
         SelectOptions={SelectOptions}
         Panels={Panels}
         imgSrcIconRight={imgSrcIconRight}
         RightMenuItems={RightMenuItems}
         logo={logo}
-      /> */}
+      />
       <div className="mt-2">
         <SubNavbar DropdownItems={DropdownItems} />
       </div>

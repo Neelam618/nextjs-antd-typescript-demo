@@ -16,7 +16,8 @@ export const Navbar: FC<NavbarTypes> = ({ NavMenuItems }) => {
   const [current, setCurrent] = useState('key1');
   return (
     <div
-      style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.5rem 4rem' }}
+    className="navbarWrapper"
+      style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.1rem 4rem' }}
       id="navbar"
     >
       <Menu

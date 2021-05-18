@@ -2,6 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Header from '../components/Header/Header'
+import menu from '../img/drawer-menu.svg';
+import user from '../img/user.svg';
+import cart from '../img/cart.svg';
+import envato from '../img/envato.svg';
+import signIn from '../img/sign-in.svg';
+import './_app.less'
 
 // const AppLayout = dynamic(() => import('../components/Navbar/Navbar'), { ssr: false });
 let TopMenuItems = [ { menuTxt: 'Forums', href: '#' }, { menuTxt: 'Start Selling', href: '#' },]
@@ -213,20 +219,247 @@ let NavMenuItems = [
     },
   ]
 
+let SelectOptions = [ 
+{ optionTxt: 'Web Themes & Template', href: '#' },
+{ optionTxt: 'Code', href: '#' },
+{ optionTxt: 'Video', href: '#' },
+{ optionTxt: 'Audio', href: '#' },
+{ optionTxt: 'Photos', href: '#' },
+{ optionTxt: '3D Files', href: '#' }
+]
+
+let Panels =[
+  {
+    panelHeader: 'All Items',
+    PanelChildren: [
+      { panelLink: 'Poular Files', href: '#' },
+      { panelLink: 'Featured Files', href: '#' },
+      { panelLink: 'Top New Files', href: '#' },
+      { panelLink: 'Follow feed', href: '#' },
+      { panelLink: 'Top Authors', href: '#' },
+      { panelLink: 'Top New Authors', href: '#' },
+      { panelLink: 'Public Collections', href: '#' },
+      { panelLink: 'View All Categories', href: '#' },
+    ],
+    key: "1"
+  },
+  {
+    panelHeader: 'PHP Scripts',
+    PanelChildren: [
+      { panelLink: 'Show All PHP Scripts', href: '#' },
+      { panelLink: 'Polpular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Calendars', href: '#' },
+      { panelLink: 'Countdowns', href: '#' },
+      { panelLink: 'Datebase Abstractions', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+      { panelLink: 'Help and Support Tools', href: '#' },
+      { panelLink: 'Images and Media', href: '#' },
+      { panelLink: 'Loaders and Uploaders', href: '#' },
+      { panelLink: 'Navigation', href: '#' },
+      { panelLink: 'News Tickers', href: '#' },
+      { panelLink: 'Polls', href: '#' },
+      { panelLink: 'Project Management Tools', href: '#' },
+      { panelLink: 'Ratings and Charts', href: '#' },
+      { panelLink: 'Search', href: '#' },
+      { panelLink: 'Shopping Carts', href: '#' },
+      { panelLink: 'Social Networking', href: '#' },
+      { panelLink: 'Miscellaneous', href: '#' },
+    ],
+    key: "2"
+  },
+  {
+    panelHeader: 'WordPress',
+    PanelChildren: [
+      { panelLink: 'Show All WordPress', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+      { panelLink: 'Forums', href: '#' },
+      { panelLink: 'Galleries', href: '#' },
+      { panelLink: 'Interface Elements', href: '#' },
+      { panelLink: 'Media', href: '#' },
+      { panelLink: 'Membership', href: '#' },
+      { panelLink: 'Newsletters', href: '#' },
+      { panelLink: 'SEO', href: '#' },
+      { panelLink: 'Social Networking', href: '#' },
+      { panelLink: 'Utilities', href: '#' },
+      { panelLink: 'Widgets', href: '#' },
+      { panelLink: 'Miscellaneous', href: '#' },
+      { panelLink: 'WordPress Themes on ThemeForest', href: '#' },
+    ],
+    key: "3"
+  },
+  {
+    panelHeader: 'eCommerce',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "4"
+  },
+  {
+    panelHeader: 'Javascript',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "5"
+  },
+  {
+    panelHeader: 'CSS',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "6"
+  },
+  {
+    panelHeader: 'Mobile',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "7"
+  },
+  {
+    panelHeader: 'HTML5',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "8"
+  },
+  {
+    panelHeader: 'Skins',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "9"
+  },
+  {
+    panelHeader: 'WP Themes',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "10"
+  },
+  {
+    panelHeader: 'Plugins',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "11"
+  },
+  {
+    panelHeader: 'Mockup Generator',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "12"
+  },
+  {
+    panelHeader: 'More',
+    PanelChildren: [
+      { panelLink: 'Show All eCommerce', href: '#' },
+      { panelLink: 'Popular Items', href: '#' },
+      { panelLink: 'Add-ons', href: '#' },
+      { panelLink: 'Advertising', href: '#' },
+      { panelLink: 'Calandars', href: '#' },
+      { panelLink: 'eCommerce', href: '#' },
+      { panelLink: 'Elementor', href: '#' },
+      { panelLink: 'Forms', href: '#' },
+    ],
+    key: "13"
+  }
+]
+
+let RightMenuItems =[
+  { menuTxt: 'Guest Cart', href: '#', iconImgSrc: cart },
+  { menuTxt: 'Create an Envato Account', href: '#', iconImgSrc: envato },
+  { menuTxt: 'Sign In', href: '#', iconImgSrc: signIn },
+]
 
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div className="appWrapper">
       <Header 
-       TopMenuItems= {TopMenuItems}
-       logo= {'https://assets.market-storefront.envato.com/storefront/packs/media/images/logos/envato-market-f6121fbbfec25dbc851a3e5aea13c8ad.svg'}
-       dropdownTxt= {'Our Products'}
-       Options={Options}
-       menuIconTxt= {'Sign In'}
-       NavMenuItems = {NavMenuItems}
-       DropdownItems={DropdownItems}
+        TopMenuItems= {TopMenuItems}
+        logo= {'https://assets.market-storefront.envato.com/storefront/packs/media/images/logos/envato-market-f6121fbbfec25dbc851a3e5aea13c8ad.svg'}
+        dropdownTxt= {'Our Products'}
+        Options={Options}
+        menuIconTxt= {'Sign In'}
+        NavMenuItems = {NavMenuItems}
+        DropdownItems={DropdownItems}
+        imgSrcIconLeft= {menu} 
+        SelectOptions={SelectOptions}
+        Panels={Panels}
+        imgSrcIconRight= {user}
+        RightMenuItems= {RightMenuItems}
       />
-    </>
+    </div>
   );
 }

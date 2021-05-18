@@ -20,7 +20,10 @@ export type SubNavbarTypes = {
 
 export const SubNavbar: FC<SubNavbarTypes> = ({ DropdownItems }) => {
   return (
-    <div style={{display: 'flex',  padding: '0.5rem 4rem'}} id="subnav">
+    <div
+    className="subNavbarWrapper"
+    style={{display: 'flex', padding: '0.5rem 4rem'}}
+    id="subnav">
       <Menu mode="horizontal" style={{ marginLeft: -10 }}>
         {DropdownItems.map(({ dropdownTitle, SubNavOptions }) => {
           return (
