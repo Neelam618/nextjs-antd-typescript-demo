@@ -36,7 +36,7 @@ export const Hero: FC<HeroType> = ({
           </div>
         </Col>
         <Col xl={12}>
-          <img src={imgSrc} alt={imgAlt} />
+          <img src={imgSrc} alt={imgAlt} style={{width: '100%'}}/>
         </Col>
       </Row>
     </div>

@@ -446,7 +446,7 @@ let RightMenuItems =[
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <div style={{backgroundColor: '#eceef5'}}>
+    <div  className="body" style={{backgroundColor: '#eceef5'}}>
       <Header 
         TopMenuItems= {TopMenuItems}
         logo= {'https://assets.market-storefront.envato.com/storefront/packs/media/images/logos/envato-market-f6121fbbfec25dbc851a3e5aea13c8ad.svg'}
