@@ -22,7 +22,7 @@ export const Hero: FC<HeroType> = ({
 }) => {
   return (
     <div id="hero">
-      <Row gutter={[48, 0]} justify="center" align="middle">
+      <Row gutter={[48, 0]} justify="space-between" align="middle">
         <Col xl={12}>
           <h1
             className="heroHeading"

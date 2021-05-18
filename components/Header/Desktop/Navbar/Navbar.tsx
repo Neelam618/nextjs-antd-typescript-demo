@@ -17,7 +17,7 @@ export const Navbar: FC<NavbarTypes> = ({ NavMenuItems }) => {
   return (
     <div
     className="navbarWrapper"
-      style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.1rem 4rem' }}
+      style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.1rem 5rem' }}
       id="navbar"
     >
       <Menu
