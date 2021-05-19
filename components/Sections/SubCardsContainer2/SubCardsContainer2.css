@@ -1,9 +1,0 @@
-.cards {
-    flex-wrap: wrap;
-}
-
-@media screen and (min-width: 1042px){
-    .cards {
-        flex-wrap: nowrap;
-    }
-}
