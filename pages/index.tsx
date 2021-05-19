@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Router from "next/router";
 
-const redirectTo = "/";
+const redirectTo = "/menu1";
 
 export default class RootPage extends Component {
   static async getInitialProps(ctx: any) {
