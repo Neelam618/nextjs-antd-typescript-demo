@@ -1,0 +1,25 @@
+.ant-card-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ant-card-meta-avatar {
+    order: 2;
+    align-self: flex-end;
+}
+
+.ant-card-meta-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .ant-card-body {
+    display: none;
+} */
+/* .ant-card-cover a > img:hover .ant-card-body {
+    display: block !important;
+}  */
+
+.ant-col.ant-col-xxl-12 {
+    padding: 0 !important;
+}
