@@ -45,16 +45,16 @@ export const MainCardsContainer: FC<MainCardsContainerType> = ({ MainCardsContai
                 <Card
                   hoverable
                   // className="bg-gray-100 overflow-hidden shadow-sm hover:shadow-xl border-0 cursor-default hover:bg-white rounded-xl h-410px"
-                  style={{backgroundColor: 'white', overflow: 'hidden', border: 0, cursor: 'default', borderRadius: 15, height: 480}}
+                  style={{backgroundColor: 'white', overflow: 'hidden', border: 0, cursor: 'default', borderRadius: 10, height: 480, padding: 36, fontSize: 16}}
                 >
                   <div>
                     <a href={titleHref}>
-                      <h1 style={{fontSize: '40px', textAlign: 'center'}}>
+                      <h1 style={{fontSize: '32px', textAlign: 'center'}}>
                         {titleTxt}
                       </h1>
                     </a>
-                    <p style={{textAlign: 'center', fontSize: 25, marginBottom: 8}}>{paraTxt}</p>
-                    <div className="text-center text-lg">
+                    <p style={{textAlign: 'center', marginBottom: 8}}>{paraTxt}</p>
+                    <div className="text-center text-lg" style={{textAlign: 'center'}}>
                       <a href={link1Href} style={{marginRight: 18, color: 'skyblue'}}>
                         {link1Txt}
                       </a>
@@ -74,7 +74,7 @@ export const MainCardsContainer: FC<MainCardsContainerType> = ({ MainCardsContai
                       src={cardImgSrc}
                       alt={cardImgAlt}
                       // className="border-4 border-white border-solid shadow-2xl rounded-xl"
-                      style={{border: '4px solid white'}}
+                      style={{border: '4px solid white', display: 'block', margin: '0 auto', width: '100%'}}
                     />
                   </a>
                 </Card>
