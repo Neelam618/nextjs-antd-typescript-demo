@@ -82,7 +82,7 @@ export const MainCardsContainer: FC<MainCardsContainerType> = ({ MainCardsContai
       </Row>
       <Button type="primary" size="large" 
       // className="mt-16 mx-auto block rounded-md"
-      style={{marginTop: '4rem', marginRight: 'auto', marginLeft: 'auto', display: 'block' }}
+      style={{marginTop: '4rem', marginRight: 'auto', marginLeft: 'auto', display: 'block', boxShadow: '0 2px 0 hsl(87deg 58% 35%)', borderRadius: 5 }}
       >
         {btnTxt}
       </Button>

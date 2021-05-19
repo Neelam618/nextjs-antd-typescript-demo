@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import { Card, Row, Col, Button } from 'antd';
-import stars from '../../../../public/img/stars.png';
-import './SubCardsContainer1.css';
+import stars from '../../../img/stars.png';
+import './SubCardsContainer1.less';
 
-export type MySubCard1Type = {
-  MySubCard1Items: MySubCard1ItemsType[];
+export type SubCardsContainer1Type = {
+  SubCardsContainer1Items: SubCardsContainer1ItemsType[];
   btnTxt: string;
 };
 
-type MySubCard1ItemsType = {
+type SubCardsContainer1ItemsType = {
   imgSrc: string;
   imgHref: string;
   metaTitle: string;
@@ -17,28 +17,28 @@ type MySubCard1ItemsType = {
 
 const { Meta } = Card;
 
-export const MySubCard1: FC<MySubCard1Type> = ({ MySubCard1Items, btnTxt }) => {
+export const SubCardsContainer1: FC<SubCardsContainer1Type> = ({ SubCardsContainer1Items, btnTxt }) => {
   return (
-    <div className="bg-gray-200 py-10 lg:py-32">
+    <div id="subCardsContainer1">
       <Row gutter={[32, 32]} style={{ marginLeft: 0, marginRight: 0 }}>
-        <Col xl={12} className="xl:order-1">
-          <div className="xl:ml-16 xl:mr-32 text-center xl:text-left">
-            <h2 className="text-4xl font-normal leading-10">
+        <Col xl={12} className="col1">
+          <div className="content">
+            <h2 style={{fontSize: 32}}>
               Unique themes and templates for every budget and every project.
             </h2>
-            <Button type="primary" size="large" className="mt-10 rounded-md hidden xl:block">
+            <Button type="primary" size="large" className="DesktopBtn" style={{ boxShadow: '0 2px 0 hsl(87deg 58% 35%)', borderRadius: 5}}>
               {btnTxt}
             </Button>
           </div>
         </Col>
-        <Col xl={12} className="bg-gray-200 xl:bg-white rounded-lg xl:order-0">
+        <Col xl={12} className="col2" style={{borderRadius: 10}}>
           <Row
             gutter={[24, 24]}
-            style={{ borderRadius: 10 }}
-            className="pl-0 xl:pl-24 py-6 pr-3"
+            style={{ borderRadius: 10, padding: '1rem', paddingTop: '1.5rem' }}
+            className="imgGrid"
             justify="center"
           >
-            {MySubCard1Items.map(({ imgSrc, imgHref, metaTitle, metaDes }) => {
+            {SubCardsContainer1Items.map(({ imgSrc, imgHref, metaTitle, metaDes }) => {
               return (
                 <Col md={12}>
                   <Card
@@ -48,7 +48,7 @@ export const MySubCard1: FC<MySubCard1Type> = ({ MySubCard1Items, btnTxt }) => {
                           alt={metaTitle}
                           src={imgSrc}
                           title={metaTitle}
-                          className="relative mx-auto"
+                          style={{position: 'relative', margin: '0 auto', width: '100%'}}
                         />
                       </a>
                     }
@@ -57,7 +57,7 @@ export const MySubCard1: FC<MySubCard1Type> = ({ MySubCard1Items, btnTxt }) => {
                     <Meta
                       title={metaTitle}
                       description={metaDes}
-                      avatar={<img src={stars} alt="" className="w-40" />}
+                      avatar={<img src={stars} alt="" style={{height: 14}}/>}
                     />
                   </Card>
                 </Col>
@@ -66,8 +66,8 @@ export const MySubCard1: FC<MySubCard1Type> = ({ MySubCard1Items, btnTxt }) => {
           </Row>
         </Col>
 
-        <Col xl={0} className="mx-auto order-3">
-          <Button type="primary" size="large" className="mt-2 mx-auto block rounded-md xl:hidden">
+        <Col xl={0} style={{margin: '0 auto', order: 3}} className="mobileBtn">
+          <Button type="primary" size="large" style={{margin: '0 auto', marginTop: '0.5rem',  boxShadow: '0 2px 0 hsl(87deg 58% 35%)', borderRadius: 5}}>
             {btnTxt}
           </Button>
         </Col>
@@ -75,3 +75,5 @@ export const MySubCard1: FC<MySubCard1Type> = ({ MySubCard1Items, btnTxt }) => {
     </div>
   );
 };
+
+export default SubCardsContainer1

@@ -1,0 +1,72 @@
+#subCardsContainer1 {
+    padding: 8rem 0;
+}
+#subCardsContainer1 .col1 {
+    order: 1;
+}
+#subCardsContainer1 .col2 {
+    order: 0;
+}
+#subCardsContainer1 .content {
+    margin-left: 2rem;
+    text-align: left;
+    width: 400px;
+}
+#subCardsContainer1 .DesktopBtn {
+    margin-top: 2.5rem;
+    display: block;
+}
+#subCardsContainer1 .imgGrid {
+    background-color: white;
+}
+#subCardsContainer1 .mobileBtn {
+    display: none;
+}
+.ant-card-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ant-card-meta-avatar {
+    order: 2;
+    align-self: flex-end;
+}
+
+.ant-card-meta-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-col.ant-col-xxl-12 {
+    padding: 0 !important;
+}
+@media screen and (max-width: 1200px) {
+    #subCardsContainer1 {
+        padding: 2.5rem 0;
+    }  
+    #subCardsContainer1 .col1 {
+        order: unset;
+        margin: 0 auto;
+    }
+    #subCardsContainer1 .content {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4rem;
+    }
+    #subCardsContainer1 .imgGrid {
+        padding-left: 0;
+    }
+    #subCardsContainer1 .mobileBtn {
+        display: block;
+    }
+    #subCardsContainer1 .DesktopBtn {
+        display: none;
+    }
+    #subCardsContainer1 .imgGrid {
+        background-color: inherit;
+    }
+}
+
+// @media screen and (max-width: 600px) {
+// }
