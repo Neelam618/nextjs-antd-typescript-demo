@@ -70,33 +70,31 @@ export const SubCardsContainer2: FC<SubCardsContainer2Type> = ({
             })}
           </Row>
         </Col>
-        <Col xl={12} className="col2 w-full" 
-        // style={{width: '100%', position: 'relative'}}
+        <Col xl={12} className="col2" 
         >
-          <div className="xl:mr-32 content">
+          <div className="content">
             <div style={{textAlign: 'right'}}>
-              <h2 className="contentTitle text-4xl font-normal text-center xl:text-right leading-10 mb-8">
+              <h2 className="contentTitle">
                 {title}
               </h2>
             </div>
-            <div className="cardsContainer flex justify-center lg:flex-nowrap flex-row items-center xl:-ml-16">
-              <div className="cardBody w-410px mx-4 lg:ml-0 bg-white p-6 rounded-lg shadow-xl relative z-10 flex lg:flex-col mb-8 xl:mb-0"
-              // style={{position: 'relative', zIndex: 10}}
+            <div className="cardsContainer">
+              <div className="cardBody"
               >
-                <img className="h-12 self-start" style={{height: '3rem', alignSelf: 'flex-start'}} src={card1ImgSrc} alt="" />
-                <div className="cardTxt self-start text-sm text-gray-700 ml-6 lg:ml-0 lg:mt-4">
+                <img style={{height: '3rem', alignSelf: 'flex-start'}} src={card1ImgSrc} alt="" />
+                <div className="cardTxt">
                   {card1Txt}
                 </div>
               </div>
-              <div className="cardBody w-410px mx-4 bg-white p-6 rounded-lg shadow-xl flex lg:flex-col mb-8 xl:mb-0">
-                <img className="h-12 self-start" style={{height: '3rem', alignSelf: 'flex-start'}} src={card2ImgSrc} alt="" />
-                <div className="cardTxt self-start text-sm text-gray-700 ml-6 lg:ml-0 lg:mt-4">
+              <div className="cardBody">
+                <img style={{height: '3rem', alignSelf: 'flex-start'}} src={card2ImgSrc} alt="" />
+                <div className="cardTxt">
                   {card2Txt}
                 </div>
               </div>
-              <div className="cardBody w-410px mx-4 lg:mr-0 bg-white p-6 rounded-lg shadow-xl flex lg:flex-col mb-8 xl:mb-0">
-                <img className="h-12 self-start" style={{height: '3rem', alignSelf: 'flex-start'}} src={card3ImgSrc} alt="" />
-                <div className="cardTxt self-start text-sm text-gray-700 ml-6 lg:ml-0 lg:mt-4">
+              <div className="cardBody">
+                <img style={{height: '3rem', alignSelf: 'flex-start'}} src={card3ImgSrc} alt="" />
+                <div className="cardTxt">
                   {card3Txt}
                 </div>
               </div>
