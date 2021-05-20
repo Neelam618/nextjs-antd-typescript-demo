@@ -457,7 +457,7 @@ let Options = [
   ]
 
 const Search = () => (
-	<div>
+	<>
 	<Header 
 		TopMenuItems= {TopMenuItems}
 		logo= {'https://assets.market-storefront.envato.com/storefront/packs/media/images/logos/envato-market-f6121fbbfec25dbc851a3e5aea13c8ad.svg'}
@@ -475,6 +475,7 @@ const Search = () => (
 	<ReactiveBase
 		app="myappdemo"
     	credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4'
+		className='reactivebase'
 		style={{maxWidth: 1600, margin: '0 auto', paddingTop: 15}} 
 	>
 		<div className='datasearch'>
@@ -595,7 +596,7 @@ const Search = () => (
            { imgSrc: Github, href: 'https//github.com' },
          ]}
       />
-	</div>
+	</>
 );
 
 export default Search;

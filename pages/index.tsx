@@ -1,6 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
-import dynamic from 'next/dynamic';
 import Header from '../components/Header/Header'
 import menu from '../img/drawer-menu.svg';
 import user from '../img/user.svg';
@@ -19,7 +17,6 @@ import SubCardsContainer2 from '../components/Sections/SubCardsContainer2/SubCar
 import Footer1 from '../components/Footer/Footer1'
 import './_app.less'
 
-// const AppLayout = dynamic(() => import('../components/Navbar/Navbar'), { ssr: false });
 let TopMenuItems = [ { menuTxt: 'Forums', href: '#' }, { menuTxt: 'Start Selling', href: '#' },]
 
 let Options = [
@@ -601,7 +598,7 @@ let SubCardsContainer2Items =[
 ]
 
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp() {
   return (
     <div  className="body" style={{backgroundColor: '#eceef5'}}>
       <Header 

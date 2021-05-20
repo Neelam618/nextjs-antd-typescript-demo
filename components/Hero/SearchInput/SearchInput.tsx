@@ -9,7 +9,7 @@ export type SearchInputType = {
 };
 
 export const SearchInput: FC<SearchInputType> = ({ placeholder, btnTxt }) => {
-  const [data, setData] = useState('Type something...');
+  const [data, setData] = useState('');
   function getData(val) {
     setData(val.target.value)
   }
