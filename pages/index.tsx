@@ -15,7 +15,7 @@ import MainCardsContainer from '../components/Sections/MainCardsContainer/MainCa
 import SubCardsContainer1 from '../components/Sections/SubCardsContainer1/SubCardsContainer1'
 import SubCardsContainer2 from '../components/Sections/SubCardsContainer2/SubCardsContainer2'
 import Footer1 from '../components/Footer/Footer1'
-import './_app.less'
+import './index.less'
 
 let TopMenuItems = [ { menuTxt: 'Forums', href: '#' }, { menuTxt: 'Start Selling', href: '#' },]
 
