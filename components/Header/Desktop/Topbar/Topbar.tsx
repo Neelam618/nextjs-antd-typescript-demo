@@ -38,54 +38,56 @@ export const Topbar: FC<TopbarTypes> = ({
   TopMenuItems,
 }) => {
   return (
-    <div
-    className="topbarWrapper"
-      style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'black', padding: '0.5rem 6rem'}}
-      id="topbar"
-    >
-      <div>
-        <img src={logo} alt="" style={{width: 200}} />
-      </div>
-      <Menu
-        mode="horizontal"
-        style={{ marginRight: -20, backgroundColor: 'black', color: '#afafaf', border: 0, fontSize: '1rem', fontWeight: 600 }}
+    <div style={{backgroundColor: 'black'}}>
+      <div
+      className="topbarWrapper"
+        style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}
+        id="topbar"
       >
-        {TopMenuItems.map(({ menuTxt, href }) => {
-          return (
-            <Menu.Item style={{border: 0}}>
-              <a className="navLink" href={href} 
-              >
-                {menuTxt}
-              </a>
-            </Menu.Item>
-          );
-        })}
-
-        <SubMenu
-          icon={<AppstoreOutlined />}
-          title={dropdownTxt}
-          style={{border: 0}}
-          popupClassName="topbarPopup"
+        <div>
+          <img src={logo} alt="" style={{width: 200}} />
+        </div>
+        <Menu
+          mode="horizontal"
+          style={{ marginRight: -20, backgroundColor: 'black', color: '#afafaf', border: 0, fontSize: '1rem', fontWeight: 600 }}
         >
-          {Options.map(({ optionTxt, href, logoInOption }) => {
+          {TopMenuItems.map(({ menuTxt, href }) => {
             return (
-              <Menu.Item style={{ height: 'auto', width: '300px' }}>
-                <div style={{ margin: 10 }}>
-                  <img src={logoInOption} alt="" style={{ height: 18, display: 'block' }} />
-                  <a href={href} className="option-link" style={{ display: 'block' }}>
-                    {optionTxt}
-                  </a>
-                </div>
+              <Menu.Item style={{border: 0}}>
+                <a className="navLink" href={href} 
+                >
+                  {menuTxt}
+                </a>
               </Menu.Item>
             );
           })}
-        </SubMenu>
 
-        <Menu.Item style={{border: 0, backgroundColor: '#252628', padding: '0 1em', borderRadius: 5}}>
-          <IconFont type="icon-shoppingcart" />
-          {menuIconTxt}
-        </Menu.Item>
-      </Menu>
+          <SubMenu
+            icon={<AppstoreOutlined />}
+            title={dropdownTxt}
+            style={{border: 0}}
+            popupClassName="topbarPopup"
+          >
+            {Options.map(({ optionTxt, href, logoInOption }) => {
+              return (
+                <Menu.Item style={{ height: 'auto', width: '300px' }}>
+                  <div style={{ margin: 10 }}>
+                    <img src={logoInOption} alt="" style={{ height: 18, display: 'block' }} />
+                    <a href={href} className="option-link" style={{ display: 'block' }}>
+                      {optionTxt}
+                    </a>
+                  </div>
+                </Menu.Item>
+              );
+            })}
+          </SubMenu>
+
+          <Menu.Item style={{border: 0, backgroundColor: '#252628', padding: '0 1em', borderRadius: 5}}>
+            <IconFont type="icon-shoppingcart" />
+            {menuIconTxt}
+          </Menu.Item>
+        </Menu>
+      </div>
     </div>
   );
 };

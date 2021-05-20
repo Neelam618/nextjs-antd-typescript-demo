@@ -20,27 +20,29 @@ export type SubNavbarTypes = {
 
 export const SubNavbar: FC<SubNavbarTypes> = ({ DropdownItems }) => {
   return (
-    <div
-    className="subNavbarWrapper"
-    style={{display: 'flex', padding: '0.5rem 6rem', borderBottom: '1px solid #e1e8ed', backgroundColor: '#f5f5f5' }}
-    id="subnav">
-      <Menu mode="horizontal" style={{ marginLeft: -10 }}>
-        {DropdownItems.map(({ dropdownTitle, SubNavOptions }) => {
-          return (
-            <SubMenu popupClassName="subNavPopup" title={dropdownTitle} className="submenu-title">
-              {SubNavOptions.map(({ optionTxt, href }) => {
-                return (
-                  <Menu.Item>
-                    <a href={href} style={{ display: 'block' }}>
-                      {optionTxt}
-                    </a>
-                  </Menu.Item>
-                );
-              })}
-            </SubMenu>
-          );
-        })}
-      </Menu>
+    <div style={{backgroundColor: '#f5f5f5' }}>
+      <div
+      className="subNavbarWrapper"
+      style={{display: 'flex', paddingTop: 4, paddingBottom: 4, borderBottom: '1px solid #e1e8ed' }}
+      id="subnav">
+        <Menu mode="horizontal" style={{ marginLeft: -10 }}>
+          {DropdownItems.map(({ dropdownTitle, SubNavOptions }) => {
+            return (
+              <SubMenu popupClassName="subNavPopup" title={dropdownTitle} className="submenu-title">
+                {SubNavOptions.map(({ optionTxt, href }) => {
+                  return (
+                    <Menu.Item>
+                      <a href={href} style={{ display: 'block' }}>
+                        {optionTxt}
+                      </a>
+                    </Menu.Item>
+                  );
+                })}
+              </SubMenu>
+            );
+          })}
+        </Menu>
+      </div>
     </div>
   );
 };
