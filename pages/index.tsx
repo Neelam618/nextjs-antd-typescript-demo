@@ -1,15 +1,12 @@
-import { Component } from "react";
-import Router from "next/router";
+import React from 'react';
 
-const redirectTo = "/menu1";
+export default function App() {
+  return (
+    <div></div>
+  )
+}
 
-export default class RootPage extends Component {
-  static async getInitialProps(ctx: any) {
-    if (ctx && ctx.req) {
-      ctx.res.writeHead(302, { Location: redirectTo })
-      ctx.res.end()
-    } else {
-      return Router.push(redirectTo)
-    }
-  }
+export async function getServerSideProps({ req }) {
+  const headers = req ? req.headers : {};
+  return { props: { headers } }
 }
