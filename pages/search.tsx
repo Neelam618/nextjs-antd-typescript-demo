@@ -5,7 +5,13 @@ import menu from '../img/drawer-menu.svg';
 import user from '../img/user.svg';
 import envato from '../img/envato.svg';
 import signIn from '../img/sign-in.svg';
+import Insta from '../img/instagram.svg';
+import Twitter from '../img/twitter.svg';
+import Dribble from '../img/dribble.svg';
+import Youtube from '../img/youtube.svg';
+import Github from '../img/github.svg';
 import Header from '../components/Header/Header';
+import Footer1 from '../components/Footer/Footer1'
 
 import {
 	ReactiveBase,
@@ -580,6 +586,16 @@ const Search = () => (
 			</div>
 		</div>
 	</ReactiveBase>
+	<Footer1 
+         copyRightTxt={'© 2021 Envato Pty Ltd. Trademarks and brands are the property of their respective owners.'}
+         HrefsWithImgSrcs= {[
+           { imgSrc: Twitter, href: 'https://twitter.com/' },
+           { imgSrc: Insta, href: 'https://instagram.com/' },
+           { imgSrc: Dribble, href: 'https://dribble.com/' },
+           { imgSrc: Youtube, href: 'https://youtube.com/' },
+           { imgSrc: Github, href: 'https//github.com' },
+         ]}
+      />
 	</>
 );
 
