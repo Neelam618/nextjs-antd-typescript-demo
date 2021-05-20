@@ -10,10 +10,6 @@ export type SearchInputType = {
 
 export const SearchInput: FC<SearchInputType> = ({ placeholder, btnTxt }) => {
   const [data, setData] = useState('Type something...');
-  // function getData() {
-  //   let val = document.getElementById("input").value;
-  //   let url = "searchbox="+ val
-  // }
   function getData(val) {
     setData(val.target.value)
   }
