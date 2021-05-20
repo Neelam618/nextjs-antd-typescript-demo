@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
+    "@appbaseio/reactivesearch": "^3.18.0",
     "@zeit/next-less": "^1.0.1",
     "antd": "^4.5.2",
     "babel-plugin-import": "^1.13.0",

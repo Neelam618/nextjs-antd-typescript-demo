@@ -1,0 +1,151 @@
+/* layout */
+
+body {
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .datasearch {
+    padding: 15px;
+  }
+  .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  }
+  
+  .col {
+    flex: 1;
+    padding: 15px;
+  }
+  
+  .row > .col:first-child {
+    max-width: 350px;
+  }
+  
+  .row > .col:last-child {
+    background: #fafafa;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .wrap {
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex-direction: column;
+  }
+  
+  .align-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .justify-space-between {
+    justify-content: space-between;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  @media all and (max-width: 767px) {
+    .row {
+      flex-direction: column;
+    }
+  
+    .row > .col:first-child {
+      border-right: none;
+      max-width: none;
+    }
+  }
+  
+  /* apps */
+  
+  .authors-list {
+    color: #9d9d9d;
+  }
+  
+  .ratings-list {
+    padding-top: 10px;
+  }
+  
+  .card-title {
+    position: relative !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin-top: 4px;
+    color: #4d4d4d;
+    font-size: 1rem;
+    margin: 10px 10px 0 10px;
+  }
+  
+  .css-149suws-Card {
+    margin: 20px !important;
+  }
+  
+  .css-197a8cc-Image{
+    background-size: cover !important;
+  }
+  .css-12v9vzr-container a{
+    max-width: 1104px !important;
+    min-width: 300px !important;
+    width: 350px !important;
+    height: auto;
+    box-shadow: 0 0 16px #ccc;
+  }
+  
+  .css-149suws-Card h2 {
+    padding-bottom: 0 !important;
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 10px 10px;
+  }
+  
+  .card-content-links {
+    align-self: flex-end;
+  }
+  .preview-link {
+    border: 1px solid #ccc;
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 3px;
+    color: #666;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 5px;
+    box-shadow: none !important;
+  }
+  .preview-link:hover {
+    background-color: #ccc;
+    color: white;
+  }
+  
+  .cart-link {
+    border: 1px solid #79b530;
+    padding: 9px 13px;
+    border-radius: 3px;
+    box-shadow: none !important;
+  }
+  .cart-link:hover{
+    border: 1px solid black;
+  }
+  
+  .item-price {
+    color: #4d4d4d;
+    margin-top: 1rem;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .sales {
+    color: #999;
+  }
