@@ -7,11 +7,11 @@ import {
 	SingleDropdownRange,
 	ResultCard,
 	ReactiveList,
-	DataSearch,
+	CategorySearch,
 	RangeInput
 } from '@appbaseio/reactivesearch';
 
-// import './search.less';
+import './search.less';
 
 const Search = () => (
 	<ReactiveBase
@@ -21,27 +21,19 @@ const Search = () => (
 		style={{maxWidth: 1600, margin: '0 auto'}} 
 	>
 		<div className='datasearch'>
-			<DataSearch
+		<CategorySearch
 				componentId="searchbox"
-				dataField={["title", "author"]}
-				// title="Search"
-				fieldWeights={[1, 3]}
+				dataField="title"
+				categoryField="title.keyword"
 				placeholder="Search"
-				autosuggest={true}
-				showClear={true}
-				// defaultSuggestions={[{label: "Wordpress", value: "Wordpress"}, {label: "Figma", value: "Figma"}]}
+				autosuggest={false}
 				highlight={true}
-				highlightField="title"
-				queryFormat="or"
-				fuzziness={0}
-				debounce={100}
-				react={{
-					and: ["CategoryFilter", "SearchFilter"]
+				style={{
+					padding: '5px',
+					marginTop: '10px',
+					marginBottom: '3rem'
 				}}
-				showFilter={true}
-				filterLabel="Venue filter"
-				URLParams={true}
-				/>
+			/>
 		</div>
 		<div className="row reverse-labels">
 			<div className="col">
@@ -61,12 +53,12 @@ const Search = () => (
 					dataField="price"
 					title="Price"
 					range={{
-						"start": 8,
+						"start": 10,
 						"end": 80
 					}}
 					defaultValue={{
-						"start": 10,
-						"end": 30
+						"start": 27,
+						"end": 72
 					}}
 					rangeLabels={{
 						"start": "From",
