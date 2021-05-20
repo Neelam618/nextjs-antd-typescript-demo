@@ -41,11 +41,11 @@ export const Topbar: FC<TopbarTypes> = ({
     <div style={{backgroundColor: 'black'}}>
       <div
       className="topbarWrapper"
-        style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}
+        style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: 60}}
         id="topbar"
       >
         <div>
-          <img src={logo} alt="" style={{width: 200}} />
+          <img src={logo} alt="" style={{width: 170}} />
         </div>
         <Menu
           mode="horizontal"
