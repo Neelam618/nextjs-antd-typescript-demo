@@ -73,13 +73,18 @@ export const Topbar: FC<TopbarTypes> = ({
                 <Menu.Item style={{ height: 'auto', width: '300px' }}>
                   <div style={{ margin: 10 }}>
                     <img src={logoInOption} alt="" style={{ height: 18, display: 'block' }} />
-                    <a href={href} className="option-link" style={{ display: 'block' }}>
+                    <a href={href} className="option-link" style={{ display: 'block', fontSize: '1rem' }}>
                       {optionTxt}
                     </a>
                   </div>
                 </Menu.Item>
               );
             })}
+            <hr />
+            <div style={{padding: 20, height: 'auto', fontSize: '1rem'}}>
+              <p style={{paddingBottom: 7, color: 'black'}}>Join the <a href="#">Envato community</a></p>
+              <p style={{color: 'black'}}>Learn from others in <a href="#">the forums</a></p>
+            </div>
           </SubMenu>
 
           <Menu.Item style={{border: 0, backgroundColor: '#252628', padding: '0 1em', borderRadius: 5}}>
