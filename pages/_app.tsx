@@ -7,10 +7,16 @@ import user from '../img/user.svg';
 import cart from '../img/cart.svg';
 import envato from '../img/envato.svg';
 import signIn from '../img/sign-in.svg';
-import Hero from '../components/Hero/Hero'
+import Insta from '../img/instagram.svg';
+import Twitter from '../img/twitter.svg';
+import Dribble from '../img/dribble.svg';
+import Youtube from '../img/youtube.svg';
+import Github from '../img/github.svg';
+import Hero from '../components/Hero/Hero';
 import MainCardsContainer from '../components/Sections/MainCardsContainer/MainCardsContainer'
 import SubCardsContainer1 from '../components/Sections/SubCardsContainer1/SubCardsContainer1'
 import SubCardsContainer2 from '../components/Sections/SubCardsContainer2/SubCardsContainer2'
+import Footer1 from '../components/Footer/Footer1'
 import './_app.less'
 
 // const AppLayout = dynamic(() => import('../components/Navbar/Navbar'), { ssr: false });
@@ -613,40 +619,49 @@ export default function MyApp({ Component, pageProps }) {
         RightMenuItems= {RightMenuItems}
       />
       <div className="mainWrapper">
-      <Hero 
-         headingTxt={'51,541 WordPress Themes & Website Templates From $2'}
-         paraTxt={
-           'WordPress themes, web templates and more. Brought to you by the largest global community of creatives.'}
-         imgSrc={
-           'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/themeforest/search-header-e9b1f87ec2352b50a7d1b2da92ee268d.png'}
-         imgAlt={'Surfing and water sports theme'}
-         btnTxt={'Search'}
-         placeholder={'e.g. responsive WordPress'}
-      />
-      <MainCardsContainer 
-          MainCardsContainerItems={MainCardsContainerItems}
-          btnTxt={'View All Categories'}
-      />
-      <SubCardsContainer1 
-          SubCardsContainer1Items= {SubCardsContainer1Items}
-          btnTxt= {'View all themes'}
-      />
+        <Hero 
+          headingTxt={'51,541 WordPress Themes & Website Templates From $2'}
+          paraTxt={
+            'WordPress themes, web templates and more. Brought to you by the largest global community of creatives.'}
+          imgSrc={
+            'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/themeforest/search-header-e9b1f87ec2352b50a7d1b2da92ee268d.png'}
+          imgAlt={'Surfing and water sports theme'}
+          btnTxt={'Search'}
+          placeholder={'e.g. responsive WordPress'}
+        />
+        <MainCardsContainer 
+            MainCardsContainerItems={MainCardsContainerItems}
+            btnTxt={'View All Categories'}
+        />
+        <SubCardsContainer1 
+            SubCardsContainer1Items= {SubCardsContainer1Items}
+            btnTxt= {'View all themes'}
+        />
 
-      <SubCardsContainer2 
-          SubCardsContainer2Items= {SubCardsContainer2Items}
-          title= {'Were the largest theme marketplace in the world'}
-          card1Txt= {'Home of the most popular themes in the world'}
-          card1ImgSrc=
-            {'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/value-prop-icons/popular-f17ddb16bbcfb47b4d24656ef9bf5fa3.svg'}
-          card2Txt= {'Clear documentation and theme support available'}
-          card2ImgSrc=
-            {'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/value-prop-icons/support-eaac5e66c8a5454ed083346094e404cd.svg'}
-          card3Txt= {'Quality reviewed creators and items'}
-          card3ImgSrc=
-            {'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/value-prop-icons/quality-1b3c0c21025219fdff69803474a2e018.svg'}
-      />
+        <SubCardsContainer2 
+            SubCardsContainer2Items= {SubCardsContainer2Items}
+            title= {'Were the largest theme marketplace in the world'}
+            card1Txt= {'Home of the most popular themes in the world'}
+            card1ImgSrc=
+              {'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/value-prop-icons/popular-f17ddb16bbcfb47b4d24656ef9bf5fa3.svg'}
+            card2Txt= {'Clear documentation and theme support available'}
+            card2ImgSrc=
+              {'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/value-prop-icons/support-eaac5e66c8a5454ed083346094e404cd.svg'}
+            card3Txt= {'Quality reviewed creators and items'}
+            card3ImgSrc=
+              {'https://assets.market-storefront.envato.com/storefront/packs/media/images/home/value-prop-icons/quality-1b3c0c21025219fdff69803474a2e018.svg'}
+        />
       </div>
-
+      <Footer1 
+         copyRightTxt={'© 2021 Envato Pty Ltd. Trademarks and brands are the property of their respective owners.'}
+         HrefsWithImgSrcs= {[
+           { imgSrc: Twitter, href: 'https://twitter.com/' },
+           { imgSrc: Insta, href: 'https://instagram.com/' },
+           { imgSrc: Dribble, href: 'https://dribble.com/' },
+           { imgSrc: Youtube, href: 'https://youtube.com/' },
+           { imgSrc: Github, href: 'https//github.com' },
+         ]}
+      />
     </div>
   );
 }
