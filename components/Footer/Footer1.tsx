@@ -16,7 +16,7 @@ export type Footer1Types = {
 
 export const Footer1: FC<Footer1Types> = ({ copyRightTxt, HrefsWithImgSrcs }) => {
   return (
-    <div style={{backgroundColor: 'black', marginTop: '8rem'}}>
+    <div style={{backgroundColor: 'black'}}>
       <div className="footerContainer">
       <div className="copyRightTxt">{copyRightTxt}</div>
         <div className="flex justify-center order-1 lg:order-2" style={{display: 'flex'}}>
