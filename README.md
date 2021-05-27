@@ -3,22 +3,20 @@
 
 Next.js + Ant design + Typescript
 
-![](https://github.com/gnokoheat/nextjs-ant-design-typescript/blob/master/docs/nextjs-antdesign-typescript.gif?raw=true)
+This Project is build by cloning the template repo: https://github.com/gnokoheat/nextjs-ant-design-typescript
 
-- Including simple structure & layout
 
 ## Usage
-1. Copy this repository.
+1. Clone this repository.
+
+2. cd nextjs-antd-typescript-demo/
 ```
-git clone https://github.com/gnokoheat/nextjs-ant-design-typescript
-cd nextjs-ant-design-typescript/
-```
-2. Install dependencies
+3. Install dependencies
 ```
 yarn install
 ```
 
-3. Run app
+4. Run app
 ``` bash
 # Dev
 yarn dev
